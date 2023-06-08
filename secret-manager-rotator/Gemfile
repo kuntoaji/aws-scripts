@@ -1,0 +1,2 @@
+gem 'aws-sdk-secretsmanager', '~> 1.0'
+gem 'activesupport'
