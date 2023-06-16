@@ -1,7 +1,4 @@
-require 'active_support'
-require 'active_support/time'
 require 'aws-sdk-secretsmanager'
-require 'json'
 
 class SecretManagerRotator
   def initialize(secret_id)

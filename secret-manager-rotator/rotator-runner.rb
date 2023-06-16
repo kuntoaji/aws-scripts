@@ -1,6 +1,16 @@
+require 'active_support'
+require 'active_support/time'
+require 'json'
 require_relative 'secret-manager-rotator'
 
-secret_id = 'ExampleSecret'
+# Script to run the secret manager rotator
+# Run bundle install to install dependencies
+#
+# Usage: ruby rotator-runner.rb <secret_name>
+# Example: ruby rotator-runner.rb my-secret
+
+secret_id = ARGV.first
+puts "Rotating secret #{secret_id}"
 secret_manager_rotator = SecretManagerRotator.new secret_id
 
 puts 'Current secret:'
